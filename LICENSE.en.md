@@ -26,7 +26,7 @@ c. __BY-NC-SA Compatible License__ means a license listed at [creativecommons.or
 
 d. __Copyright and Similar Rights__ means copyright and/or similar rights closely related to copyright including, without limitation, performance, broadcast, sound recording, and Sui Generis Database Rights, without regard to how the rights are labeled or categorized. For purposes of this Public License, the rights specified in Section 2(b)(1)-(2) are not Copyright and Similar Rights.
 
-e. __Effective Technological Measures__ means those measures that, in the absence of proper authority, may not be circumvented under laws fulfilling obligations under Article 11 of the WIPO Copyright Treaty adopted on December 20, 1996, and/or similar international agreements.
+e. __Effective Technological Measures__ means those measures that, in the absence of proper authority, may not be circumvented under laws fulfilling obligations under Article 11 of the [WIPO Copyright Treaty adopted on December 20, 1996](https://wipolex.wipo.int/en/text/295166), and/or similar international agreements.
 
 f. __Exceptions and Limitations__ means fair use, fair dealing, and/or any other exception or limitation to Copyright and Similar Rights that applies to Your use of the Licensed Material.
 
@@ -42,7 +42,7 @@ k. __NonCommercial__ means not primarily intended for or directed towards commer
 
 l. __Share__ means to provide material to the public by any means or process that requires permission under the Licensed Rights, such as reproduction, public display, public performance, distribution, dissemination, communication, or importation, and to make material available to the public including in ways that members of the public may access the material from a place and at a time individually chosen by them.
 
-m. __Sui Generis Database Rights__ means rights other than copyright resulting from Directive 96/9/EC of the European Parliament and of the Council of 11 March 1996 on the legal protection of databases, as amended and/or succeeded, as well as other essentially equivalent rights anywhere in the world.
+m. __Sui Generis Database Rights__ means rights other than copyright resulting from [Directive 96/9/EC of the European Parliament and of the Council of 11 March 1996](https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A31996L0009) on the legal protection of databases, as amended and/or succeeded, as well as other essentially equivalent rights anywhere in the world.
 
 n. __You__ means the individual or entity exercising the Licensed Rights under this Public License. Your has a corresponding meaning.
 
