@@ -26,7 +26,7 @@ c. **Licença Compatível com a BY-NC-SA** significa uma licença listada em cre
 
 d. **Direito de Autor e Direitos Similares** significa direito de autor e/ou direitos similares estreitamente relacionados com o direito de autor, incluindo, mas não se limitando a, direitos de execução, radiodifusão, fixação de sons, e Direitos Sui Generis sobre Bases de Dados, independentemente de como sejam classificados ou categorizados. Para os fins desta Licença Pública, os direitos especificados na Seção 2(b)(1)-(2) não são Direito de Autor e Direitos Similares.
 
-e. **Medidas Eficazes de Caráter Tecnológico** significam aquelas medidas que, na ausência de direito para tanto, não podem ser contornadas em jurisdições cumprindo obrigações sob o Artigo 11 do Tratado da OMPI de Direito de Autor adotado em 20 de dezembro de 1996, e/ou acordos internacionais similares.
+e. **Medidas Eficazes de Caráter Tecnológico** significam aquelas medidas que, na ausência de direito para tanto, não podem ser contornadas em jurisdições cumprindo obrigações sob o Artigo 11 do [Tratado da OMPI de Direito de Autor adotado em 20 de dezembro de 1996](https://wipolex.wipo.int/en/text/295166), e/ou acordos internacionais similares.
 
 f. **Exceções e Limitações** significam utilização justa (“fair use”), tratamento justo (“fair dealing”), e/ou qualquer outra exceção ou limitação ao Direito de Autor e Direitos Similares que se aplique à Sua utilização do Material Licenciado.
 
@@ -42,7 +42,7 @@ k. **NãoComercial** significa não primariamente intencionado ou direcionado a 
 
 l. **Compartilhar** significa fornecer material ao público por qualquer meio ou processo que requeira permissão sob os Direitos Licenciados, como reprodução, exibição pública, execução pública, distribuição, disseminação, comunicação ou importação, e disponibilizar material ao público, incluindo por vias pelas quais os membros do público possam ter acesso ao material a partir de um local e no momento individualmente escolhidos por eles.
 
-m. **Direitos Sui Generis sobre Bases de Dados** significam outros direitos, que não o direito de autor e direitos conexos, resultantes da Diretiva 96/9/EC do Parlamento Europeu e do Conselho de 11 de Março de 1996 sobre a proteção legal de bases de dados, conforme emendada e/ou sucedida, bem como outros direitos essencialmente equivalentes em qualquer lugar do mundo.
+m. **Direitos Sui Generis sobre Bases de Dados** significam outros direitos, que não o direito de autor e direitos conexos, resultantes da [Diretiva 96/9/EC do Parlamento Europeu e do Conselho de 11 de Março de 1996](https://eur-lex.europa.eu/legal-content/PT/TXT/?uri=CELEX%3A31996L0009) sobre a proteção legal de bases de dados, conforme emendada e/ou sucedida, bem como outros direitos essencialmente equivalentes em qualquer lugar do mundo.
 
 n. **Você** significa o indivíduo ou entidade que exerce os Direitos Licenciados sob esta Licença Pública. Lhe, Seu, Sua e Suas têm um significado correspondente.
 
