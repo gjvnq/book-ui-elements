@@ -1,20 +1,22 @@
 .PHONY: help all fast open
 
-help:
-	@echo "Avaliable targets"
-	@echo "help"
-	@echo "all"
-	@echo "fast"
+METADATA=src/meta.yml
+BIB_DATA=src/biblio.bib
+CSS_SHEET=src/style.css
+CITATION_STYLE=src/abnt.csl
+PANDOC=pandoc
+PANDOC_OPTS=-s -N --from markdown+smart+auto_identifiers --toc --css $(CSS_SHEET) --csl $(CITATION_STYLE)  --bibliography=$(BIB_DATA) --filter pandoc-citeproc --metadata-file $(METADATA)
 
-all: livro/*
-	epubcheck --warn --mode exp --save livro
+all: livro.epub livro.html
 
-fast: livro/*
-	-rm livro.epub
-	cd livro && zip ../livro.epub -r .
+all.md: src/*.md
+	find src -type f -name '*.md' | sort | xargs cat > $@
+
+livro.epub: all.md $(METADATA) $(BIB_DATA) $(CSS_SHEET) $(CITATION_STYLE)
+	$(PANDOC) $(PANDOC_OPTS) $< -o $@
+
+livro.html: all.md $(METADATA) $(BIB_DATA) $(CSS_SHEET) $(CITATION_STYLE)
+	$(PANDOC) $(PANDOC_OPTS) $< -o $@
 
 open:
 	ebook-viewer livro.epub&
-
-other:
-	pandoc -s --from markdown+smart+auto_identifiers --toc --css src/style.css --csl=src/abnt.csl  --bibliography=src/biblio.bib --filter pandoc-citeproc --metadata-file=src/meta.yml src/*.md -o src.epub

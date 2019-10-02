@@ -92,7 +92,7 @@ pre {
   text-align: left;
 }
 /* Following EPUB 3 spec by the letter (applies to RS but let’s make sure it is respected because we never know) */
-nav[epub|type~="toc"] ol {
+nav[epub|type~="toc"] ol, nav#toc ol, nav#TOC ul {
   list-style: none !important;
 }
 /* [Opinionated] Default to prevent bloat in case linear="no" is rendered as linear="yes" */
@@ -530,25 +530,6 @@ hr.transition {
   border: none;
   background: none;
   /* Note: overridden in night mode excepted when using linear-gradient */
-}
-/* Over-engineered asterism with an SVG background 
-which is legacy RMSDK-compliant, reflows with text and 
-is night-mode compatible (black asterisk + white border) */
-hr.asterism {
-  width: auto;
-  border: none;
-  margin: 1.5em 0;
-  height: 1.5em;
-  text-indent: 0;
-  text-align: center;
-  background: transparent url("../Images/asterism.svg") no-repeat center;
-  /* Change url if you put asterism in a folder */
-  background-size: 2.5em 1.25em;
-  /* RMSDK doesn't support -> won't scale but SVG viewport is OK for a wide range of font-sizes */
-  overflow: hidden;
-  /* Fixes legacy RMSDK bug when contents before hr are invisible */
-  opacity: 0.7;
-  /* Better border color match in night mode (less disruptive) */
 }
 /* TABLES */
 table {
@@ -1203,6 +1184,6 @@ a.long-url, div.references a {
   -webkit-hyphens: auto;
   hyphens: auto;
 }
-a:visited {
+a:visited, a:visited span {
   color: navy;
 }
