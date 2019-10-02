@@ -1,6 +1,6 @@
 *.zip
-*.epub
-livro.html
+#*.epub
+#livro.html
 src.*
 all.md
 tmp*
