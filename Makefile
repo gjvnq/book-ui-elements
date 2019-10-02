@@ -15,3 +15,6 @@ fast: livro/*
 
 open:
 	ebook-viewer livro.epub&
+
+other:
+	pandoc -s --from markdown+smart+auto_identifiers --toc --css src/style.css --csl=src/abnt.csl  --bibliography=src/biblio.bib --filter pandoc-citeproc --metadata-file=src/meta.yml src/*.md -o src.epub
