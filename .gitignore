@@ -1,3 +1,4 @@
+*.zip
 *.epub
 
 # Created by https://www.gitignore.io/api/vim,osx,linux,emacs,windows,sublimetext
