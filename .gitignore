@@ -1,3 +1,4 @@
+build/*
 *.zip
 #*.epub
 #livro.html
@@ -5,6 +6,9 @@ src.*
 all.md
 tmp*
 tmp/*
+*.synctex
+*.synctex.gz
+*.bak
 
 # Created by https://www.gitignore.io/api/vim,osx,linux,emacs,windows,sublimetext
 # Edit at https://www.gitignore.io/?templates=vim,osx,linux,emacs,windows,sublimetext

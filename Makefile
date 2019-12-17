@@ -1,22 +1,19 @@
-.PHONY: help all fast open
+MAIN=livro-letramento-em-computadores
+XELATEX=xelatex
+TEX_OPTS=-synctex=1 -interaction=nonstopmode -output-directory build/
 
-METADATA=src/meta.yml
-BIB_DATA=src/biblio.bib
-CSS_SHEET=src/style.css
-CITATION_STYLE=src/abnt.csl
-PANDOC=pandoc
-PANDOC_OPTS=-s -N --from markdown+smart+auto_identifiers --toc --css $(CSS_SHEET) --csl $(CITATION_STYLE)  --bibliography=$(BIB_DATA) --filter pandoc-citeproc --metadata-file $(METADATA)
+all: $(MAIN).pdf
 
-all: livro.epub livro.html
+build:
+	mkdir build
 
-all.md: src/*.md
-	find src -type f -name '*.md' | sort | xargs cat > $@
-
-livro.epub: all.md $(METADATA) $(BIB_DATA) $(CSS_SHEET) $(CITATION_STYLE)
-	$(PANDOC) $(PANDOC_OPTS) $< -o $@
-
-livro.html: all.md $(METADATA) $(BIB_DATA) $(CSS_SHEET) $(CITATION_STYLE)
-	$(PANDOC) $(PANDOC_OPTS) $< -o $@
-
-open:
-	ebook-viewer livro.epub&
+$(MAIN).pdf: $(MAIN).tex *.tex *.bib
+	$(XELATEX) $(TEX_OPTS) ../$(MAIN).tex
+	cd build && bibtex $(MAIN).aux
+	cd build && makeindex $(MAIN).idx 
+	-cd build && makeindex $(MAIN).nlo -s nomencl.ist -o $(MAIN).nls
+	cd build && makeglossaries $(MAIN)
+	$(XELATEX) $(TEX_OPTS) ../$(MAIN).tex
+	$(XELATEX) $(TEX_OPTS) ../$(MAIN).tex
+	cp build/$(MAIN).synctex.gz $(MAIN).synctex.gz
+	cp build/$(MAIN).pdf $(MAIN).pdf
