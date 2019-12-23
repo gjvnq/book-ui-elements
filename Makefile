@@ -5,9 +5,9 @@ TEX_OPTS=-synctex=1 -interaction=nonstopmode -output-directory build/
 all: $(MAIN).pdf
 
 build:
-	mkdir build
+	-mkdir build
 
-$(MAIN).pdf: $(MAIN).tex *.tex *.bib
+$(MAIN).pdf: $(MAIN).tex *.tex *.bib build
 	$(XELATEX) $(TEX_OPTS) ../$(MAIN).tex
 	cd build && bibtex $(MAIN).aux
 	cd build && makeindex $(MAIN).idx 
