@@ -1,5 +1,4 @@
 % compilação de fontes
-
 \usepackage{amsmath}
 \usepackage{mathtools}
 \usepackage{amsfonts}
@@ -21,7 +20,7 @@
 \setotherlanguages{french,english,spanish,german,italian}
 
 \newfontfamily\ipafont{Doulos SIL}
-\newcommand{\ipa}[1]{{\ipafont #1 \regularfont}}
+\newcommand{\ipa}[1]{{\ipafont #1}}
 
 \usepackage{marginnote}
 
@@ -41,6 +40,10 @@
 \usepackage{leading}				% espaçamento entrelinhas (leading)
 \leading{13pt}
 
+\usepackage{tikz}
+\usetikzlibrary{matrix, backgrounds,fit}
+
+\usepackage{siunitx}
 % ---
 % Pacotes de citações
 % ---
@@ -144,5 +147,32 @@
 \providecommand{\myglspl}[1]{{\scshape \glspl{#1}\myglsindex{#1}}}
 \providecommand{\myGls}[1]{{\scshape \Gls{#1}\myglsindex{#1}}}
 \providecommand{\myGlspl}[1]{{\scshape \Glspl{#1}\myglsindex{#1}}}
+\providecommand{\myglsIdx}[2]{{\scshape \gls{#1}\myglsindex{#2}}}
+\providecommand{\myglsplIdx}[2]{{\scshape \glspl{#1}\myglsindex{#2}}}
+\providecommand{\myGlsIdx}[2]{{\scshape \Gls{#1}\myglsindex{#2}}}
+\providecommand{\myGlsplIdx}[2]{{\scshape \Glspl{#1}\myglsindex{#2}}}
+
+
+% Números
+\newcommand{\zb}{0\texttt{b}} % 0b prefix
+\newcommand{\zx}{0\texttt{x}} % 0x prefix
+\newcommand{\nx}[1]{0\texttt{x}\mathrm{#1}} % 0x prefix
+\newcommand{\numfmt}[1]{\texttt{#1}}
+\newcommand\ldiv[2]{% long division
+$\strut#1$\kern.25em\smash{\raise.3ex\hbox{$\big)$}}$\mkern-8mu
+        \overline{\enspace\strut#2}$}
 
 \input{glossario}
+
+\setlrmarginsandblock{3cm}{6cm}{*}
+\setulmarginsandblock{3cm}{6cm}{*}
+\checkandfixthelayout
+\setlength{\marginparwidth}{\marginparwidth-1cm}
+\renewcommand*{\marginpar}[1]{
+            \checkoddpage
+            \ifoddpage
+               \marginparmargin{right}
+            \else
+               \marginparmargin{right}%left
+            \fi
+            \marginnote{#1}}

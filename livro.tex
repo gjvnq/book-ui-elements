@@ -8,7 +8,7 @@
 	12pt,				% tamanho da fonte
 	openright,			% capítulos começam em pág ímpar (insere página vazia caso preciso)
 	twoside,			% para impressão em recto e verso. Oposto a oneside
-	b5paper,			% tamanho do papel
+	a4paper,			% tamanho do papel
 	english,			% idioma adicional para hifenização
 	french,				% idioma adicional para hifenização
 	brazil,				% o último idioma é o principal do documento
@@ -64,77 +64,93 @@ a servir de modelo para composição e diagramação de livros e folhetos em
 \LaTeX em conformidade com a norma ABNT NBR 6029:2006 \emph{Informação e
 documentação - Livros e folhetos - Apresentação}.
 
-Em geral, qualquer classe do \LaTeX\ que contemple o formato de livros poderia
-ser utilizada (como \textsf{book}, \textsf{memoir} e \textsf{scrbook}, entre
-outras). A formatação de geral dos capítulos, margens, tamanho de página,
-fontes, etc., segundo a norma ABNT em questão, pode ser modificada pelo usuário
-à vontade.
-
-Porém, este modelo foi composto com a classe \textsf{abntex2.cls} com o intuito
-de estimular que autores de teses e dissertações convertam e publiquem seus
-trabalhos em forma de livro.
-
-Essencialmente, este modelo é idêntico aos demais modelos distribuídos com o
-\abnTeX. Porém, este documento exemplifica como customizar a formatação final do
-documento para que ele fique adequado aos padrões de publicação de livros.
-Observe que há vários comentários no código-fonte do arquivo, de modo a
-facilitar ao máximo as customizações. Consulte o portal do projeto para obter
-acesso aos manuais, wiki, e grupos de discussões do \abnTeX.
-
-Em linhas gerais, a norma ABNT NBR 6029:2006 não estabelece parâmetros tão
-rígidos quanto a ABNT NBR 14724:2011, para trabalhos acadêmicos, e segue, de
-certa forma, o design usual de livros\footnote{Para facilitação da compreensão
-de termos técnicos, ver a Tabela \ref{vocabulario-texto} com alguns termos do
-design de livros.}.
-
-Desta forma, temos:
-
-\begin{description}
-\item[parte pré-textual] Composta por: falsa folha de rosto, folha de rosto,
-colofão (opcional na parte pós-textual), sumário (conteúdo),
-a\-gra\-de\-ci\-men\-tos (acknowledgments), dedicatória, epígrafe;
-\item[folha de rosto] Como diz o nome em inglês (\textit{title page}) a ``folha
-de rosto'' é a \textit{página do título}. No verso da folha de rosto, costuma-se
-incluir os dados sobre a obra e a edição, catalogação, editora, direitos
-autorais e de reprodução, etc;
-\item [parte pós-textual] Composta por epílogo, posfácio, apêndice, glossário,
-bibliografia, índice remissivo (inglês: \textit{index}), colofão, etc;
-
-\end{description}
-
-Este documento deve ser utilizado como complemento dos manuais do \abnTeX\
-\cite{abntex2classe,abntex2cite,abntex2cite-alf} e da classe \textsf{memoir}
-\cite{memoir}.
 
 
 % ------------------------------------------------------------
 \chapter{Informação}
 % ------------------------------------------------------------
 
-Lorem \mygls{bit} dsads
+\section{Números Inteiros}
 
-\marginpar{The new section start point will be pointed out
-by an arrow}
+\lettrine[nindent=0.35em,lhang=0.40,loversize=0.3]{N}{úmeros}
+são comumente representados em um sistema de base dez com os seguintes dez dígitos indo-arábicos: 0, 1, 2, 3, 4, 5, 6, 7, 8 e 9.
 
-% lroem ipsum \ruby{bit}{\ipa{/bɪt/}}{} dfsds \ruby{学}{がく}\ruby{生}{せい} fddfdf \tBit dsads \tBit.
+Por diversos motivos, computadores comumente representam números em um sistema binário com apenas dois dígitos: 0 e 1. Cada dígito binário é comumente chamado de \mygls{bit}.
 
-% {\scshape bit}
+O número cento e vinte e três é comumente escrito como $123$ em base dez. A expressão $123$ equivale a dizer: um vezes cem mais dois vezes dez mais três vezes um. Note a multiplicação implícita por potências de base 10.
 
-% \iterm{bit} dsdsdsads \iterm{bit}.
+Em binário, escrevemos cento e vinte e três como $1111011$. Para evitar ambiguidades quanto a base, podemos usar a notação de parênteses $(1111011)_{\color{red}2}$ com a base em base dez no subíndice, aqui destacado em vermelho. Ou podemos utilizar a notação de prefixo $\zb1111011$, onde a letra $\texttt{b}$ indica que se trata de um número em \underline{b}inário.
 
-Fontes em modo matemático:
-
-$E=mc^2$ and $\sin(\alpha+\beta)=\pi$
+Em símbolos:
 
 \[
-\int_{-\infty}^{\infty}e^{-x^2}\,dx=\sqrt{\pi}
+	123 = 1 \times 10^2 + 2 \times 10^1 + 3 \times 10^0
 \]
+\[
+	\zb1111011 = 1 \times 2^6 + 1 \times 2^5 + 1 \times 2^4 + 1 \times 2^3 + 0 \times 2^2 + 1  \times 2^1 + 1  \times 2^0
+\]
+
+\marginpar{Você não precisa ser bom em calcular conversões de bases, você só precisa entender a ideia geral de diferentes bases de numeração.}
+
+O processo de conversão de decimal para binário consiste em divisões por dois e usar os restos ao contrário. Exemplo (os restos estão em círculos para facilitar a leitura):
+
+\begin{tikzpicture}
+\matrix (a) [matrix of math nodes,column sep=2pt]
+{
+123 &  & \phantom{0}2 & & & & & & & & \\
+\phantom{00}\textcircled{1} &  & \phantom{0}61 &  \phantom{00}2 & & & & & & & \\
+    &  &  \phantom{00}\textcircled{1} & \phantom{0}30 &  \phantom{00}2 & & & & & & \\
+    &  &    &  \phantom{00}\textcircled{0} & \phantom{0}15 & \phantom{00}2 & & & & & \\
+    &  &    &    &  \phantom{00}\textcircled{1} & \phantom{00}7 & \phantom{00}2 & & & & \\
+    &  &    &    &    & \phantom{00}\textcircled{1} & \phantom{00}3 & \phantom{00}2 & & & \\
+    &  &    &    &    &   & \phantom{00}\textcircled{1} & \phantom{00}1 & \phantom{00}2 & & \\
+    &  &    &    &    &   &   & \phantom{00}\textcircled{1} & \phantom{00}0 & & \\
+};
+\draw (a-1-3.north west)|-(a-1-3.south east);
+\draw (a-2-4.north west)|-(a-2-4.south east);
+\draw (a-3-5.north west)|-(a-3-5.south east);
+\draw (a-4-6.north west)|-(a-4-6.south east);
+\draw (a-5-7.north west)|-(a-5-7.south east);
+\draw (a-6-8.north west)|-(a-6-8.south east);
+\draw (a-7-9.north west)|-(a-7-9.south east);
+\end{tikzpicture}
 
 \[
-\alpha \beta \gamma \Delta \epsilon \mu \zeta \Theta
+	123 = \zb1111011
 \]
 
-\lipsum[1-10]
+Grupos de \myglspl{bit} de tamanho regular recebem o nome de \mygls{palavra}. Por convenção, \myglspl{palavra} de 8 bits recebem o nome de \mygls{byte} (en: /\ipa{baɪt}/, pt-BR: /\ipa{baitʃi}/).
+
+Além do sistema binário, é comum utilizarmos o sistema hexadecimal (base 16) e, mais raramente, o sistema octal (base 8) para reduzir o número de dígitos necessários (leia-se: para escrevermos menos).
+
+Como o sistema hexadecimal precisa de mais dígitos do que há no sistema indo arábico, utilizamos as primeiras letras do alfabeto para os dígitos maiores que nove. Logo, os dígitos hexadecimais são: 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, A, B, C, D, E, F.
+
+Os dígitos A, B, D, E, F correspondem aos números dez, onze, doze, treze, catorze e quinze respectivamente.
+
+Similarmente aos números binários, podemos usar as seguintes notações para evitar ambiguidade: $(\mathrm{F})_{16}$ e $\nx{F}$.
+
+A forma mais simples de convertermos binário para hexadecimal é agrupando os \myglspl{bit} de quatro em quatro.
+
+\[
+	123 = \zb1111011 = \zb\underbrace{0111}_{7}\;\underbrace{1011}_{11} = \nx{7B}
+\]
+
+Outro exemplo:
+
+\begin{align*}
+	&\nx{ABC} = \nx{A}\times16^2 + \nx{B}\times16^1 + \nx{C}\times16^0 \\
+	&= 10\times16^2 + 11\times16^1 + 12\times16^0 = 2748
+\end{align*}
+
+\section{Números de Ponto Flutuante}
+
+\lettrine[nindent=0.35em,lhang=0.40,loversize=0.3]{Q}{uando}
+queremos representar números que cobrem várias ordens de grandeza, é comum usarmos notação científica para aproximá-los.
+
+Em computação, chamamos essa técnica de \myglspl{float}. Esse termo é frequentemente abreviado para \myglsplIdx{num-flu}{float} ou \myglsplIdx{lit-float}{float}.
+
+\marginpar{Visto que, no Brasil, usamos vírgulas como separador decimal, talvez o nome número de \emph{vírgula} flutuante fosse mais adequado.}
+
 
 % ------------------------------------------------------------
 \chapter{Exemplos de imagens}

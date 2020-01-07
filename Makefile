@@ -1,7 +1,7 @@
 MAIN=livro
 XELATEX=xelatex
-TEX_OPTS=-synctex=1 -interaction=nonstopmode -output-directory build/
-# TEX_OPTS=-synctex=1 -output-directory build/
+# TEX_OPTS=-synctex=1 -interaction=nonstopmode -output-directory build/
+TEX_OPTS=-synctex=1 -output-directory build/
 
 all: $(MAIN).pdf
 
